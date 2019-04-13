@@ -1,6 +1,6 @@
 class House < ApplicationRecord
-    has_many :students
+    has_many :students, dependent: :destroy
 
     validates :name, presence: true, uniqueness: true
-    validates :ponts, numericality: { only_integer: true}
+    validates :points, numericality: { only_integer: true}
 end

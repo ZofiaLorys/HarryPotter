@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Student.destroy_all
+Student.destroy_all #Delete all house and their associated students
 House.destroy_all
 ravenclaw = House.create(name: 'Ravenclaw', points: 0)
 wally = ravenclaw.students.create(name: 'Wally Glutton')
