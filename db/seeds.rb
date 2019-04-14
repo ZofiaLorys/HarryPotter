@@ -7,7 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Student.destroy_all #Delete all house and their associated students
-House.destroy_all
-ravenclaw = House.create(name: 'Ravenclaw', points: 0)
-wally = ravenclaw.students.create(name: 'Wally Glutton')
+House.destroy_all #Delete all house and their associated students
+
+8.times do
+    house = House.create(name: Faker::Movies::HarryPotter.unique.house,
+                        points: Faker::Number.number(2))
+    students_per_house = Faker::Number.number(2).to_i
+    puts "Adding #{students_per_house} students to house #{house.name}"
+    students_per_house.times do 
+                house.students.create(name: Faker::Name.name)
+    end    
+end    
+
+puts " - There are #{House.count} houses."
+puts " - There are #{Student.count} students."
+
+
