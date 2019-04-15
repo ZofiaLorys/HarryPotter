@@ -10,7 +10,10 @@
   </head>
 
   <body>
-    <h1><%= link_to 'Howard School', '/' %></h1>
+    <header>
+      <h1><%= link_to 'Howard School', '/' %></h1>
+      <p><%= link_to 'About Us', about_path %></p>
+    </header>
     <%= yield %>
     <footer>
       <p>Copywrong 2018</p>
