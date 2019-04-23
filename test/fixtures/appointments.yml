@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  teacher: one
+  student: one
+  meeting_time: 2019-04-23 12:59:52
+
+two:
+  teacher: two
+  student: two
+  meeting_time: 2019-04-23 12:59:52

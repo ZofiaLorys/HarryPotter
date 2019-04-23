@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
    
   resources :students, only: [:index, :show]
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :pages, only: [:show]
 
-  get 'about', to: 'pages#about', as: 'about'
-
+  get ':permalink', to: 'pages#permalink'
+  get 'static_about', to: 'pages#about', as: 'about'
   root to: 'students#index'
 
 end

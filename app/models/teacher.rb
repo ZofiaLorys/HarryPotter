@@ -1,7 +1,7 @@
-class Student < ApplicationRecord
+class Teacher < ApplicationRecord
   belongs_to :house
   has many :appointments
-  has many :teachers, through: :appointment
+  has many :students, through: :appointment
 
   validates :name, presence: true
 end
