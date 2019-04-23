@@ -5,7 +5,7 @@ class SearchController < ApplicationController
     
 
 
-    def search_results
-
+    def results
+        @students = Student.where('name LIKE ?', "%#{params[:q]}%")
     end
 end
